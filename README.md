@@ -19,7 +19,7 @@ Beyond standard dynamic timing based on lane queue lengths, this project specifi
     - When preempting for an emergency vehicle, the yellow light is dynamically extended to **5 seconds**, ensuring cross-traffic safely clears the intersection to avoid rear-end collisions.
 
 - **Data Analysis & Visualization**
-  - Parses the output `tripinfo.xml` to calculate the weighted average waiting times, distinguishing between normal and emergency vehicles.
+  - Parses the output `tripinfo.xml` to calculate weighted average waiting times, distinguishing between normal and emergency vehicles.
   - Automatically generates a benchmark bar chart using `matplotlib`.
 
 ## 📊 Benchmark Results
