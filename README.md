@@ -1,8 +1,9 @@
-🚦 Intelligent Traffic Signal Control System
-📖 Project Overview
-This project implements an adaptive traffic signal control algorithm based on Python and SUMO (Simulation of Urban MObility) using the TraCI interface.
+# 🚦 Intelligent Traffic Signal Control System
 
-Beyond standard dynamic timing based on lane queue lengths, this project specifically introduces an Emergency Vehicle Preemption (EVP) strategy. It ensures absolute priority for emergency vehicles (e.g., ambulances, fire trucks) while maintaining the overall efficiency of the intersection and avoiding severe traffic congestion or sudden braking.
+## 📖 Project Overview
+This project implements an **adaptive traffic signal control algorithm** based on Python and SUMO (Simulation of Urban MObility) using the TraCI interface.
+
+Beyond standard dynamic timing based on lane queue lengths, this project specifically introduces an **Emergency Vehicle Preemption (EVP)** strategy. It ensures absolute priority for emergency vehicles (e.g., ambulances, fire trucks) while maintaining the overall efficiency of the intersection and avoiding severe traffic congestion or sudden braking.
 
 ✨ Key Features
 Dynamic Signal Timing (Adaptive Control)
