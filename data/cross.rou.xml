@@ -1,0 +1,793 @@
+<routes>
+        <!-- 东西向普通小汽车 -->
+        <vType id="car_we" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" guiShape="passenger"/>
+        <!-- 南北向普通小汽车 -->
+        <vType id="car_ns" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" guiShape="passenger"/>
+        <!-- 东西向特殊车辆（救护车） -->
+        <vType id="special_we" accel="0.8" decel="4.5" sigma="0.5" length="6" minGap="2.5" maxSpeed="20" vClass="emergency" color="1,0,0"/>
+        <!-- 南北向特殊车辆（消防车） -->
+        <vType id="special_ns" accel="0.8" decel="4.5" sigma="0.5" length="7" minGap="3" maxSpeed="20" vClass="emergency" color="0,0,1"/>
+
+        <!-- 定义 4 条路线 -->
+        <route id="route_we" edges="51o 1i 2o 52i" /> <!-- 西 -> 东 -->
+        <route id="route_ew" edges="52o 2i 1o 51i" /> <!-- 东 -> 西 -->
+        <route id="route_ns" edges="54o 4i 3o 53i" /> <!-- 北 -> 南 -->
+        <route id="route_sn" edges="53o 3i 4o 54i" /> <!-- 南 -> 北 -->
+        
+    <vehicle id="ew_0" type="car_we" route="route_ew" depart="0"/>
+    <vehicle id="we_1" type="car_we" route="route_we" depart="2"/>
+    <vehicle id="ew_2" type="car_we" route="route_ew" depart="4"/>
+    <vehicle id="we_3" type="car_we" route="route_we" depart="6"/>
+    <vehicle id="ew_4" type="car_we" route="route_ew" depart="9"/>
+    <vehicle id="special_we_5" type="special_we" route="route_we" depart="21" color="1,0,0"/>
+    <vehicle id="we_6" type="car_we" route="route_we" depart="22"/>
+    <vehicle id="ew_7" type="car_we" route="route_ew" depart="23"/>
+    <vehicle id="we_8" type="car_we" route="route_we" depart="29"/>
+    <vehicle id="ew_9" type="car_we" route="route_ew" depart="29"/>
+    <vehicle id="ew_10" type="car_we" route="route_ew" depart="30"/>
+    <vehicle id="ew_11" type="car_we" route="route_ew" depart="31"/>
+    <vehicle id="we_12" type="car_we" route="route_we" depart="37"/>
+    <vehicle id="we_13" type="car_we" route="route_we" depart="38"/>
+    <vehicle id="ew_14" type="car_we" route="route_ew" depart="48"/>
+    <vehicle id="ew_15" type="car_we" route="route_ew" depart="52"/>
+    <vehicle id="we_16" type="car_we" route="route_we" depart="59"/>
+    <vehicle id="we_17" type="car_we" route="route_we" depart="63"/>
+    <vehicle id="we_18" type="car_we" route="route_we" depart="68"/>
+    <vehicle id="special_ns_19" type="special_ns" route="route_ns" depart="69" color="0,0,1"/>
+    <vehicle id="we_20" type="car_we" route="route_we" depart="76"/>
+    <vehicle id="special_ew_21" type="special_we" route="route_ew" depart="80" color="1,0,0"/>
+    <vehicle id="ns_22" type="car_ns" route="route_ns" depart="86"/>
+    <vehicle id="we_23" type="car_we" route="route_we" depart="88"/>
+    <vehicle id="ns_24" type="car_ns" route="route_ns" depart="92"/>
+    <vehicle id="ns_25" type="car_ns" route="route_ns" depart="100"/>
+    <vehicle id="ew_26" type="car_we" route="route_ew" depart="102"/>
+    <vehicle id="ns_27" type="car_ns" route="route_ns" depart="113"/>
+    <vehicle id="ew_28" type="car_we" route="route_ew" depart="116"/>
+    <vehicle id="we_29" type="car_we" route="route_we" depart="118"/>
+    <vehicle id="we_30" type="car_we" route="route_we" depart="122"/>
+    <vehicle id="special_ew_31" type="special_we" route="route_ew" depart="124" color="1,0,0"/>
+    <vehicle id="ew_32" type="car_we" route="route_ew" depart="129"/>
+    <vehicle id="we_33" type="car_we" route="route_we" depart="139"/>
+    <vehicle id="we_34" type="car_we" route="route_we" depart="141"/>
+    <vehicle id="ns_35" type="car_ns" route="route_ns" depart="150"/>
+    <vehicle id="we_36" type="car_we" route="route_we" depart="155"/>
+    <vehicle id="special_ew_37" type="special_we" route="route_ew" depart="155" color="1,0,0"/>
+    <vehicle id="special_ew_38" type="special_we" route="route_ew" depart="161" color="1,0,0"/>
+    <vehicle id="special_we_39" type="special_we" route="route_we" depart="166" color="1,0,0"/>
+    <vehicle id="we_40" type="car_we" route="route_we" depart="169"/>
+    <vehicle id="we_41" type="car_we" route="route_we" depart="174"/>
+    <vehicle id="we_42" type="car_we" route="route_we" depart="196"/>
+    <vehicle id="special_we_43" type="special_we" route="route_we" depart="202" color="1,0,0"/>
+    <vehicle id="we_44" type="car_we" route="route_we" depart="205"/>
+    <vehicle id="we_45" type="car_we" route="route_we" depart="207"/>
+    <vehicle id="we_46" type="car_we" route="route_we" depart="209"/>
+    <vehicle id="ew_47" type="car_we" route="route_ew" depart="215"/>
+    <vehicle id="we_48" type="car_we" route="route_we" depart="227"/>
+    <vehicle id="ew_49" type="car_we" route="route_ew" depart="229"/>
+    <vehicle id="ew_50" type="car_we" route="route_ew" depart="230"/>
+    <vehicle id="we_51" type="car_we" route="route_we" depart="235"/>
+    <vehicle id="we_52" type="car_we" route="route_we" depart="237"/>
+    <vehicle id="we_53" type="car_we" route="route_we" depart="240"/>
+    <vehicle id="we_54" type="car_we" route="route_we" depart="241"/>
+    <vehicle id="sn_55" type="car_ns" route="route_sn" depart="242"/>
+    <vehicle id="special_ew_56" type="special_we" route="route_ew" depart="244" color="1,0,0"/>
+    <vehicle id="we_57" type="car_we" route="route_we" depart="248"/>
+    <vehicle id="ew_58" type="car_we" route="route_ew" depart="249"/>
+    <vehicle id="ew_59" type="car_we" route="route_ew" depart="251"/>
+    <vehicle id="ew_60" type="car_we" route="route_ew" depart="266"/>
+    <vehicle id="we_61" type="car_we" route="route_we" depart="268"/>
+    <vehicle id="ew_62" type="car_we" route="route_ew" depart="269"/>
+    <vehicle id="ew_63" type="car_we" route="route_ew" depart="276"/>
+    <vehicle id="ns_64" type="car_ns" route="route_ns" depart="277"/>
+    <vehicle id="ew_65" type="car_we" route="route_ew" depart="279"/>
+    <vehicle id="we_66" type="car_we" route="route_we" depart="295"/>
+    <vehicle id="special_ew_67" type="special_we" route="route_ew" depart="303" color="1,0,0"/>
+    <vehicle id="we_68" type="car_we" route="route_we" depart="312"/>
+    <vehicle id="ew_69" type="car_we" route="route_ew" depart="313"/>
+    <vehicle id="we_70" type="car_we" route="route_we" depart="326"/>
+    <vehicle id="we_71" type="car_we" route="route_we" depart="327"/>
+    <vehicle id="special_sn_72" type="special_ns" route="route_sn" depart="329" color="0,0,1"/>
+    <vehicle id="we_73" type="car_we" route="route_we" depart="332"/>
+    <vehicle id="ns_74" type="car_ns" route="route_ns" depart="333"/>
+    <vehicle id="we_75" type="car_we" route="route_we" depart="336"/>
+    <vehicle id="ew_76" type="car_we" route="route_ew" depart="338"/>
+    <vehicle id="we_77" type="car_we" route="route_we" depart="340"/>
+    <vehicle id="we_78" type="car_we" route="route_we" depart="342"/>
+    <vehicle id="ew_79" type="car_we" route="route_ew" depart="343"/>
+    <vehicle id="ew_80" type="car_we" route="route_ew" depart="352"/>
+    <vehicle id="special_we_81" type="special_we" route="route_we" depart="356" color="1,0,0"/>
+    <vehicle id="we_82" type="car_we" route="route_we" depart="364"/>
+    <vehicle id="we_83" type="car_we" route="route_we" depart="365"/>
+    <vehicle id="we_84" type="car_we" route="route_we" depart="368"/>
+    <vehicle id="we_85" type="car_we" route="route_we" depart="371"/>
+    <vehicle id="special_we_86" type="special_we" route="route_we" depart="374" color="1,0,0"/>
+    <vehicle id="special_ew_87" type="special_we" route="route_ew" depart="380" color="1,0,0"/>
+    <vehicle id="special_we_88" type="special_we" route="route_we" depart="384" color="1,0,0"/>
+    <vehicle id="we_89" type="car_we" route="route_we" depart="392"/>
+    <vehicle id="ew_90" type="car_we" route="route_ew" depart="393"/>
+    <vehicle id="we_91" type="car_we" route="route_we" depart="397"/>
+    <vehicle id="ew_92" type="car_we" route="route_ew" depart="407"/>
+    <vehicle id="ew_93" type="car_we" route="route_ew" depart="411"/>
+    <vehicle id="special_ew_94" type="special_we" route="route_ew" depart="413" color="1,0,0"/>
+    <vehicle id="we_95" type="car_we" route="route_we" depart="428"/>
+    <vehicle id="we_96" type="car_we" route="route_we" depart="435"/>
+    <vehicle id="ew_97" type="car_we" route="route_ew" depart="444"/>
+    <vehicle id="we_98" type="car_we" route="route_we" depart="452"/>
+    <vehicle id="ew_99" type="car_we" route="route_ew" depart="452"/>
+    <vehicle id="we_100" type="car_we" route="route_we" depart="456"/>
+    <vehicle id="ew_101" type="car_we" route="route_ew" depart="458"/>
+    <vehicle id="ew_102" type="car_we" route="route_ew" depart="459"/>
+    <vehicle id="special_ns_103" type="special_ns" route="route_ns" depart="464" color="0,0,1"/>
+    <vehicle id="ns_104" type="car_ns" route="route_ns" depart="468"/>
+    <vehicle id="we_105" type="car_we" route="route_we" depart="469"/>
+    <vehicle id="we_106" type="car_we" route="route_we" depart="471"/>
+    <vehicle id="ew_107" type="car_we" route="route_ew" depart="474"/>
+    <vehicle id="ns_108" type="car_ns" route="route_ns" depart="485"/>
+    <vehicle id="special_ew_109" type="special_we" route="route_ew" depart="498" color="1,0,0"/>
+    <vehicle id="ns_110" type="car_ns" route="route_ns" depart="500"/>
+    <vehicle id="ew_111" type="car_we" route="route_ew" depart="502"/>
+    <vehicle id="ns_112" type="car_ns" route="route_ns" depart="502"/>
+    <vehicle id="ew_113" type="car_we" route="route_ew" depart="503"/>
+    <vehicle id="special_sn_114" type="special_ns" route="route_sn" depart="509" color="0,0,1"/>
+    <vehicle id="special_we_115" type="special_we" route="route_we" depart="513" color="1,0,0"/>
+    <vehicle id="we_116" type="car_we" route="route_we" depart="514"/>
+    <vehicle id="we_117" type="car_we" route="route_we" depart="519"/>
+    <vehicle id="we_118" type="car_we" route="route_we" depart="523"/>
+    <vehicle id="ns_119" type="car_ns" route="route_ns" depart="525"/>
+    <vehicle id="we_120" type="car_we" route="route_we" depart="528"/>
+    <vehicle id="we_121" type="car_we" route="route_we" depart="546"/>
+    <vehicle id="we_122" type="car_we" route="route_we" depart="549"/>
+    <vehicle id="we_123" type="car_we" route="route_we" depart="550"/>
+    <vehicle id="ns_124" type="car_ns" route="route_ns" depart="551"/>
+    <vehicle id="special_ew_125" type="special_we" route="route_ew" depart="554" color="1,0,0"/>
+    <vehicle id="ew_126" type="car_we" route="route_ew" depart="562"/>
+    <vehicle id="special_ew_127" type="special_we" route="route_ew" depart="564" color="1,0,0"/>
+    <vehicle id="special_we_128" type="special_we" route="route_we" depart="569" color="1,0,0"/>
+    <vehicle id="special_ew_129" type="special_we" route="route_ew" depart="574" color="1,0,0"/>
+    <vehicle id="we_130" type="car_we" route="route_we" depart="587"/>
+    <vehicle id="ew_131" type="car_we" route="route_ew" depart="596"/>
+    <vehicle id="special_we_132" type="special_we" route="route_we" depart="601" color="1,0,0"/>
+    <vehicle id="ns_133" type="car_ns" route="route_ns" depart="602"/>
+    <vehicle id="ew_134" type="car_we" route="route_ew" depart="607"/>
+    <vehicle id="ew_135" type="car_we" route="route_ew" depart="608"/>
+    <vehicle id="sn_136" type="car_ns" route="route_sn" depart="612"/>
+    <vehicle id="we_137" type="car_we" route="route_we" depart="617"/>
+    <vehicle id="we_138" type="car_we" route="route_we" depart="620"/>
+    <vehicle id="special_ns_139" type="special_ns" route="route_ns" depart="624" color="0,0,1"/>
+    <vehicle id="special_we_140" type="special_we" route="route_we" depart="625" color="1,0,0"/>
+    <vehicle id="we_141" type="car_we" route="route_we" depart="630"/>
+    <vehicle id="we_142" type="car_we" route="route_we" depart="631"/>
+    <vehicle id="we_143" type="car_we" route="route_we" depart="636"/>
+    <vehicle id="ew_144" type="car_we" route="route_ew" depart="640"/>
+    <vehicle id="we_145" type="car_we" route="route_we" depart="644"/>
+    <vehicle id="ew_146" type="car_we" route="route_ew" depart="647"/>
+    <vehicle id="ew_147" type="car_we" route="route_ew" depart="650"/>
+    <vehicle id="sn_148" type="car_ns" route="route_sn" depart="651"/>
+    <vehicle id="special_we_149" type="special_we" route="route_we" depart="656" color="1,0,0"/>
+    <vehicle id="ew_150" type="car_we" route="route_ew" depart="664"/>
+    <vehicle id="ns_151" type="car_ns" route="route_ns" depart="668"/>
+    <vehicle id="special_we_152" type="special_we" route="route_we" depart="671" color="1,0,0"/>
+    <vehicle id="ew_153" type="car_we" route="route_ew" depart="674"/>
+    <vehicle id="ew_154" type="car_we" route="route_ew" depart="677"/>
+    <vehicle id="ew_155" type="car_we" route="route_ew" depart="685"/>
+    <vehicle id="ew_156" type="car_we" route="route_ew" depart="688"/>
+    <vehicle id="sn_157" type="car_ns" route="route_sn" depart="691"/>
+    <vehicle id="ew_158" type="car_we" route="route_ew" depart="702"/>
+    <vehicle id="we_159" type="car_we" route="route_we" depart="707"/>
+    <vehicle id="ns_160" type="car_ns" route="route_ns" depart="707"/>
+    <vehicle id="special_we_161" type="special_we" route="route_we" depart="712" color="1,0,0"/>
+    <vehicle id="ew_162" type="car_we" route="route_ew" depart="714"/>
+    <vehicle id="special_we_163" type="special_we" route="route_we" depart="720" color="1,0,0"/>
+    <vehicle id="we_164" type="car_we" route="route_we" depart="722"/>
+    <vehicle id="ew_165" type="car_we" route="route_ew" depart="724"/>
+    <vehicle id="ew_166" type="car_we" route="route_ew" depart="734"/>
+    <vehicle id="we_167" type="car_we" route="route_we" depart="745"/>
+    <vehicle id="we_168" type="car_we" route="route_we" depart="759"/>
+    <vehicle id="ns_169" type="car_ns" route="route_ns" depart="759"/>
+    <vehicle id="ew_170" type="car_we" route="route_ew" depart="760"/>
+    <vehicle id="ew_171" type="car_we" route="route_ew" depart="771"/>
+    <vehicle id="we_172" type="car_we" route="route_we" depart="780"/>
+    <vehicle id="ew_173" type="car_we" route="route_ew" depart="781"/>
+    <vehicle id="sn_174" type="car_ns" route="route_sn" depart="784"/>
+    <vehicle id="ns_175" type="car_ns" route="route_ns" depart="788"/>
+    <vehicle id="ew_176" type="car_we" route="route_ew" depart="797"/>
+    <vehicle id="we_177" type="car_we" route="route_we" depart="798"/>
+    <vehicle id="we_178" type="car_we" route="route_we" depart="807"/>
+    <vehicle id="we_179" type="car_we" route="route_we" depart="811"/>
+    <vehicle id="we_180" type="car_we" route="route_we" depart="812"/>
+    <vehicle id="ew_181" type="car_we" route="route_ew" depart="812"/>
+    <vehicle id="we_182" type="car_we" route="route_we" depart="814"/>
+    <vehicle id="we_183" type="car_we" route="route_we" depart="817"/>
+    <vehicle id="ew_184" type="car_we" route="route_ew" depart="819"/>
+    <vehicle id="we_185" type="car_we" route="route_we" depart="821"/>
+    <vehicle id="we_186" type="car_we" route="route_we" depart="824"/>
+    <vehicle id="we_187" type="car_we" route="route_we" depart="826"/>
+    <vehicle id="ew_188" type="car_we" route="route_ew" depart="827"/>
+    <vehicle id="we_189" type="car_we" route="route_we" depart="828"/>
+    <vehicle id="special_sn_190" type="special_ns" route="route_sn" depart="831" color="0,0,1"/>
+    <vehicle id="we_191" type="car_we" route="route_we" depart="834"/>
+    <vehicle id="special_we_192" type="special_we" route="route_we" depart="838" color="1,0,0"/>
+    <vehicle id="we_193" type="car_we" route="route_we" depart="844"/>
+    <vehicle id="ew_194" type="car_we" route="route_ew" depart="865"/>
+    <vehicle id="ew_195" type="car_we" route="route_ew" depart="879"/>
+    <vehicle id="special_sn_196" type="special_ns" route="route_sn" depart="885" color="0,0,1"/>
+    <vehicle id="we_197" type="car_we" route="route_we" depart="890"/>
+    <vehicle id="we_198" type="car_we" route="route_we" depart="892"/>
+    <vehicle id="we_199" type="car_we" route="route_we" depart="895"/>
+    <vehicle id="ew_200" type="car_we" route="route_ew" depart="900"/>
+    <vehicle id="special_we_201" type="special_we" route="route_we" depart="906" color="1,0,0"/>
+    <vehicle id="ns_202" type="car_ns" route="route_ns" depart="910"/>
+    <vehicle id="we_203" type="car_we" route="route_we" depart="916"/>
+    <vehicle id="ew_204" type="car_we" route="route_ew" depart="916"/>
+    <vehicle id="ew_205" type="car_we" route="route_ew" depart="925"/>
+    <vehicle id="we_206" type="car_we" route="route_we" depart="933"/>
+    <vehicle id="ew_207" type="car_we" route="route_ew" depart="938"/>
+    <vehicle id="ns_208" type="car_ns" route="route_ns" depart="939"/>
+    <vehicle id="we_209" type="car_we" route="route_we" depart="947"/>
+    <vehicle id="we_210" type="car_we" route="route_we" depart="950"/>
+    <vehicle id="ns_211" type="car_ns" route="route_ns" depart="955"/>
+    <vehicle id="special_sn_212" type="special_ns" route="route_sn" depart="964" color="0,0,1"/>
+    <vehicle id="ew_213" type="car_we" route="route_ew" depart="970"/>
+    <vehicle id="ew_214" type="car_we" route="route_ew" depart="971"/>
+    <vehicle id="special_ns_215" type="special_ns" route="route_ns" depart="971" color="0,0,1"/>
+    <vehicle id="ew_216" type="car_we" route="route_ew" depart="977"/>
+    <vehicle id="special_ew_217" type="special_we" route="route_ew" depart="981" color="1,0,0"/>
+    <vehicle id="ns_218" type="car_ns" route="route_ns" depart="983"/>
+    <vehicle id="we_219" type="car_we" route="route_we" depart="984"/>
+    <vehicle id="we_220" type="car_we" route="route_we" depart="994"/>
+    <vehicle id="sn_221" type="car_ns" route="route_sn" depart="996"/>
+    <vehicle id="we_222" type="car_we" route="route_we" depart="1007"/>
+    <vehicle id="special_ew_223" type="special_we" route="route_ew" depart="1009" color="1,0,0"/>
+    <vehicle id="special_we_224" type="special_we" route="route_we" depart="1015" color="1,0,0"/>
+    <vehicle id="ew_225" type="car_we" route="route_ew" depart="1021"/>
+    <vehicle id="we_226" type="car_we" route="route_we" depart="1031"/>
+    <vehicle id="we_227" type="car_we" route="route_we" depart="1032"/>
+    <vehicle id="sn_228" type="car_ns" route="route_sn" depart="1032"/>
+    <vehicle id="ns_229" type="car_ns" route="route_ns" depart="1033"/>
+    <vehicle id="special_ew_230" type="special_we" route="route_ew" depart="1040" color="1,0,0"/>
+    <vehicle id="we_231" type="car_we" route="route_we" depart="1045"/>
+    <vehicle id="ew_232" type="car_we" route="route_ew" depart="1045"/>
+    <vehicle id="we_233" type="car_we" route="route_we" depart="1048"/>
+    <vehicle id="ew_234" type="car_we" route="route_ew" depart="1050"/>
+    <vehicle id="special_we_235" type="special_we" route="route_we" depart="1054" color="1,0,0"/>
+    <vehicle id="we_236" type="car_we" route="route_we" depart="1057"/>
+    <vehicle id="we_237" type="car_we" route="route_we" depart="1065"/>
+    <vehicle id="ew_238" type="car_we" route="route_ew" depart="1075"/>
+    <vehicle id="special_we_239" type="special_we" route="route_we" depart="1077" color="1,0,0"/>
+    <vehicle id="we_240" type="car_we" route="route_we" depart="1078"/>
+    <vehicle id="we_241" type="car_we" route="route_we" depart="1090"/>
+    <vehicle id="we_242" type="car_we" route="route_we" depart="1100"/>
+    <vehicle id="we_243" type="car_we" route="route_we" depart="1102"/>
+    <vehicle id="ew_244" type="car_we" route="route_ew" depart="1108"/>
+    <vehicle id="we_245" type="car_we" route="route_we" depart="1109"/>
+    <vehicle id="ew_246" type="car_we" route="route_ew" depart="1110"/>
+    <vehicle id="sn_247" type="car_ns" route="route_sn" depart="1114"/>
+    <vehicle id="we_248" type="car_we" route="route_we" depart="1118"/>
+    <vehicle id="ew_249" type="car_we" route="route_ew" depart="1120"/>
+    <vehicle id="ns_250" type="car_ns" route="route_ns" depart="1121"/>
+    <vehicle id="we_251" type="car_we" route="route_we" depart="1129"/>
+    <vehicle id="we_252" type="car_we" route="route_we" depart="1146"/>
+    <vehicle id="ew_253" type="car_we" route="route_ew" depart="1146"/>
+    <vehicle id="we_254" type="car_we" route="route_we" depart="1153"/>
+    <vehicle id="ns_255" type="car_ns" route="route_ns" depart="1170"/>
+    <vehicle id="ew_256" type="car_we" route="route_ew" depart="1174"/>
+    <vehicle id="special_we_257" type="special_we" route="route_we" depart="1188" color="1,0,0"/>
+    <vehicle id="ns_258" type="car_ns" route="route_ns" depart="1190"/>
+    <vehicle id="we_259" type="car_we" route="route_we" depart="1192"/>
+    <vehicle id="special_we_260" type="special_we" route="route_we" depart="1193" color="1,0,0"/>
+    <vehicle id="ew_261" type="car_we" route="route_ew" depart="1210"/>
+    <vehicle id="we_262" type="car_we" route="route_we" depart="1211"/>
+    <vehicle id="ew_263" type="car_we" route="route_ew" depart="1211"/>
+    <vehicle id="sn_264" type="car_ns" route="route_sn" depart="1214"/>
+    <vehicle id="we_265" type="car_we" route="route_we" depart="1217"/>
+    <vehicle id="we_266" type="car_we" route="route_we" depart="1235"/>
+    <vehicle id="special_ew_267" type="special_we" route="route_ew" depart="1237" color="1,0,0"/>
+    <vehicle id="special_we_268" type="special_we" route="route_we" depart="1240" color="1,0,0"/>
+    <vehicle id="we_269" type="car_we" route="route_we" depart="1244"/>
+    <vehicle id="special_ew_270" type="special_we" route="route_ew" depart="1251" color="1,0,0"/>
+    <vehicle id="ew_271" type="car_we" route="route_ew" depart="1263"/>
+    <vehicle id="we_272" type="car_we" route="route_we" depart="1267"/>
+    <vehicle id="special_ns_273" type="special_ns" route="route_ns" depart="1270" color="0,0,1"/>
+    <vehicle id="ew_274" type="car_we" route="route_ew" depart="1280"/>
+    <vehicle id="special_ew_275" type="special_we" route="route_ew" depart="1287" color="1,0,0"/>
+    <vehicle id="we_276" type="car_we" route="route_we" depart="1289"/>
+    <vehicle id="sn_277" type="car_ns" route="route_sn" depart="1305"/>
+    <vehicle id="we_278" type="car_we" route="route_we" depart="1309"/>
+    <vehicle id="we_279" type="car_we" route="route_we" depart="1310"/>
+    <vehicle id="special_ew_280" type="special_we" route="route_ew" depart="1315" color="1,0,0"/>
+    <vehicle id="special_ew_281" type="special_we" route="route_ew" depart="1318" color="1,0,0"/>
+    <vehicle id="ew_282" type="car_we" route="route_ew" depart="1319"/>
+    <vehicle id="we_283" type="car_we" route="route_we" depart="1320"/>
+    <vehicle id="we_284" type="car_we" route="route_we" depart="1328"/>
+    <vehicle id="sn_285" type="car_ns" route="route_sn" depart="1328"/>
+    <vehicle id="special_we_286" type="special_we" route="route_we" depart="1329" color="1,0,0"/>
+    <vehicle id="ew_287" type="car_we" route="route_ew" depart="1334"/>
+    <vehicle id="we_288" type="car_we" route="route_we" depart="1335"/>
+    <vehicle id="ew_289" type="car_we" route="route_ew" depart="1340"/>
+    <vehicle id="we_290" type="car_we" route="route_we" depart="1344"/>
+    <vehicle id="we_291" type="car_we" route="route_we" depart="1352"/>
+    <vehicle id="sn_292" type="car_ns" route="route_sn" depart="1355"/>
+    <vehicle id="we_293" type="car_we" route="route_we" depart="1356"/>
+    <vehicle id="ns_294" type="car_ns" route="route_ns" depart="1358"/>
+    <vehicle id="ew_295" type="car_we" route="route_ew" depart="1361"/>
+    <vehicle id="ew_296" type="car_we" route="route_ew" depart="1364"/>
+    <vehicle id="we_297" type="car_we" route="route_we" depart="1369"/>
+    <vehicle id="we_298" type="car_we" route="route_we" depart="1373"/>
+    <vehicle id="ew_299" type="car_we" route="route_ew" depart="1376"/>
+    <vehicle id="we_300" type="car_we" route="route_we" depart="1390"/>
+    <vehicle id="ew_301" type="car_we" route="route_ew" depart="1391"/>
+    <vehicle id="ew_302" type="car_we" route="route_ew" depart="1394"/>
+    <vehicle id="we_303" type="car_we" route="route_we" depart="1400"/>
+    <vehicle id="ew_304" type="car_we" route="route_ew" depart="1401"/>
+    <vehicle id="we_305" type="car_we" route="route_we" depart="1402"/>
+    <vehicle id="we_306" type="car_we" route="route_we" depart="1410"/>
+    <vehicle id="ew_307" type="car_we" route="route_ew" depart="1413"/>
+    <vehicle id="sn_308" type="car_ns" route="route_sn" depart="1414"/>
+    <vehicle id="we_309" type="car_we" route="route_we" depart="1418"/>
+    <vehicle id="we_310" type="car_we" route="route_we" depart="1421"/>
+    <vehicle id="ns_311" type="car_ns" route="route_ns" depart="1427"/>
+    <vehicle id="we_312" type="car_we" route="route_we" depart="1432"/>
+    <vehicle id="special_ew_313" type="special_we" route="route_ew" depart="1438" color="1,0,0"/>
+    <vehicle id="special_we_314" type="special_we" route="route_we" depart="1439" color="1,0,0"/>
+    <vehicle id="sn_315" type="car_ns" route="route_sn" depart="1444"/>
+    <vehicle id="special_we_316" type="special_we" route="route_we" depart="1457" color="1,0,0"/>
+    <vehicle id="special_we_317" type="special_we" route="route_we" depart="1465" color="1,0,0"/>
+    <vehicle id="ew_318" type="car_we" route="route_ew" depart="1465"/>
+    <vehicle id="we_319" type="car_we" route="route_we" depart="1467"/>
+    <vehicle id="ns_320" type="car_ns" route="route_ns" depart="1482"/>
+    <vehicle id="ew_321" type="car_we" route="route_ew" depart="1508"/>
+    <vehicle id="ew_322" type="car_we" route="route_ew" depart="1520"/>
+    <vehicle id="we_323" type="car_we" route="route_we" depart="1528"/>
+    <vehicle id="special_ew_324" type="special_we" route="route_ew" depart="1532" color="1,0,0"/>
+    <vehicle id="we_325" type="car_we" route="route_we" depart="1543"/>
+    <vehicle id="special_sn_326" type="special_ns" route="route_sn" depart="1550" color="0,0,1"/>
+    <vehicle id="we_327" type="car_we" route="route_we" depart="1553"/>
+    <vehicle id="we_328" type="car_we" route="route_we" depart="1555"/>
+    <vehicle id="special_ew_329" type="special_we" route="route_ew" depart="1559" color="1,0,0"/>
+    <vehicle id="special_we_330" type="special_we" route="route_we" depart="1564" color="1,0,0"/>
+    <vehicle id="we_331" type="car_we" route="route_we" depart="1566"/>
+    <vehicle id="we_332" type="car_we" route="route_we" depart="1571"/>
+    <vehicle id="ew_333" type="car_we" route="route_ew" depart="1575"/>
+    <vehicle id="special_ew_334" type="special_we" route="route_ew" depart="1578" color="1,0,0"/>
+    <vehicle id="we_335" type="car_we" route="route_we" depart="1580"/>
+    <vehicle id="special_ew_336" type="special_we" route="route_ew" depart="1591" color="1,0,0"/>
+    <vehicle id="special_ns_337" type="special_ns" route="route_ns" depart="1599" color="0,0,1"/>
+    <vehicle id="special_ns_338" type="special_ns" route="route_ns" depart="1603" color="0,0,1"/>
+    <vehicle id="sn_339" type="car_ns" route="route_sn" depart="1603"/>
+    <vehicle id="sn_340" type="car_ns" route="route_sn" depart="1609"/>
+    <vehicle id="we_341" type="car_we" route="route_we" depart="1625"/>
+    <vehicle id="special_ew_342" type="special_we" route="route_ew" depart="1626" color="1,0,0"/>
+    <vehicle id="ew_343" type="car_we" route="route_ew" depart="1628"/>
+    <vehicle id="we_344" type="car_we" route="route_we" depart="1635"/>
+    <vehicle id="ew_345" type="car_we" route="route_ew" depart="1642"/>
+    <vehicle id="we_346" type="car_we" route="route_we" depart="1645"/>
+    <vehicle id="sn_347" type="car_ns" route="route_sn" depart="1647"/>
+    <vehicle id="we_348" type="car_we" route="route_we" depart="1664"/>
+    <vehicle id="special_ew_349" type="special_we" route="route_ew" depart="1673" color="1,0,0"/>
+    <vehicle id="ew_350" type="car_we" route="route_ew" depart="1675"/>
+    <vehicle id="ew_351" type="car_we" route="route_ew" depart="1686"/>
+    <vehicle id="we_352" type="car_we" route="route_we" depart="1688"/>
+    <vehicle id="we_353" type="car_we" route="route_we" depart="1690"/>
+    <vehicle id="ew_354" type="car_we" route="route_ew" depart="1690"/>
+    <vehicle id="special_ew_355" type="special_we" route="route_ew" depart="1694" color="1,0,0"/>
+    <vehicle id="we_356" type="car_we" route="route_we" depart="1698"/>
+    <vehicle id="ew_357" type="car_we" route="route_ew" depart="1704"/>
+    <vehicle id="ew_358" type="car_we" route="route_ew" depart="1705"/>
+    <vehicle id="ew_359" type="car_we" route="route_ew" depart="1713"/>
+    <vehicle id="sn_360" type="car_ns" route="route_sn" depart="1713"/>
+    <vehicle id="ew_361" type="car_we" route="route_ew" depart="1719"/>
+    <vehicle id="ew_362" type="car_we" route="route_ew" depart="1720"/>
+    <vehicle id="we_363" type="car_we" route="route_we" depart="1721"/>
+    <vehicle id="special_ew_364" type="special_we" route="route_ew" depart="1726" color="1,0,0"/>
+    <vehicle id="special_ew_365" type="special_we" route="route_ew" depart="1734" color="1,0,0"/>
+    <vehicle id="we_366" type="car_we" route="route_we" depart="1735"/>
+    <vehicle id="we_367" type="car_we" route="route_we" depart="1737"/>
+    <vehicle id="ew_368" type="car_we" route="route_ew" depart="1739"/>
+    <vehicle id="we_369" type="car_we" route="route_we" depart="1744"/>
+    <vehicle id="we_370" type="car_we" route="route_we" depart="1745"/>
+    <vehicle id="we_371" type="car_we" route="route_we" depart="1746"/>
+    <vehicle id="we_372" type="car_we" route="route_we" depart="1749"/>
+    <vehicle id="ns_373" type="car_ns" route="route_ns" depart="1754"/>
+    <vehicle id="we_374" type="car_we" route="route_we" depart="1755"/>
+    <vehicle id="ew_375" type="car_we" route="route_ew" depart="1760"/>
+    <vehicle id="ns_376" type="car_ns" route="route_ns" depart="1760"/>
+    <vehicle id="special_ew_377" type="special_we" route="route_ew" depart="1765" color="1,0,0"/>
+    <vehicle id="ew_378" type="car_we" route="route_ew" depart="1767"/>
+    <vehicle id="we_379" type="car_we" route="route_we" depart="1774"/>
+    <vehicle id="ew_380" type="car_we" route="route_ew" depart="1775"/>
+    <vehicle id="special_we_381" type="special_we" route="route_we" depart="1790" color="1,0,0"/>
+    <vehicle id="ew_382" type="car_we" route="route_ew" depart="1790"/>
+    <vehicle id="ns_383" type="car_ns" route="route_ns" depart="1793"/>
+    <vehicle id="ns_384" type="car_ns" route="route_ns" depart="1801"/>
+    <vehicle id="ew_385" type="car_we" route="route_ew" depart="1809"/>
+    <vehicle id="we_386" type="car_we" route="route_we" depart="1810"/>
+    <vehicle id="special_we_387" type="special_we" route="route_we" depart="1811" color="1,0,0"/>
+    <vehicle id="ew_388" type="car_we" route="route_ew" depart="1813"/>
+    <vehicle id="special_ns_389" type="special_ns" route="route_ns" depart="1816" color="0,0,1"/>
+    <vehicle id="special_ns_390" type="special_ns" route="route_ns" depart="1830" color="0,0,1"/>
+    <vehicle id="we_391" type="car_we" route="route_we" depart="1835"/>
+    <vehicle id="ew_392" type="car_we" route="route_ew" depart="1836"/>
+    <vehicle id="we_393" type="car_we" route="route_we" depart="1839"/>
+    <vehicle id="ew_394" type="car_we" route="route_ew" depart="1847"/>
+    <vehicle id="we_395" type="car_we" route="route_we" depart="1848"/>
+    <vehicle id="ew_396" type="car_we" route="route_ew" depart="1857"/>
+    <vehicle id="ew_397" type="car_we" route="route_ew" depart="1858"/>
+    <vehicle id="ew_398" type="car_we" route="route_ew" depart="1861"/>
+    <vehicle id="ns_399" type="car_ns" route="route_ns" depart="1864"/>
+    <vehicle id="we_400" type="car_we" route="route_we" depart="1866"/>
+    <vehicle id="we_401" type="car_we" route="route_we" depart="1867"/>
+    <vehicle id="ew_402" type="car_we" route="route_ew" depart="1872"/>
+    <vehicle id="special_ew_403" type="special_we" route="route_ew" depart="1875" color="1,0,0"/>
+    <vehicle id="ew_404" type="car_we" route="route_ew" depart="1876"/>
+    <vehicle id="we_405" type="car_we" route="route_we" depart="1879"/>
+    <vehicle id="we_406" type="car_we" route="route_we" depart="1883"/>
+    <vehicle id="we_407" type="car_we" route="route_we" depart="1886"/>
+    <vehicle id="special_ns_408" type="special_ns" route="route_ns" depart="1893" color="0,0,1"/>
+    <vehicle id="special_we_409" type="special_we" route="route_we" depart="1897" color="1,0,0"/>
+    <vehicle id="ew_410" type="car_we" route="route_ew" depart="1901"/>
+    <vehicle id="ns_411" type="car_ns" route="route_ns" depart="1901"/>
+    <vehicle id="we_412" type="car_we" route="route_we" depart="1902"/>
+    <vehicle id="ew_413" type="car_we" route="route_ew" depart="1902"/>
+    <vehicle id="ns_414" type="car_ns" route="route_ns" depart="1911"/>
+    <vehicle id="we_415" type="car_we" route="route_we" depart="1929"/>
+    <vehicle id="special_we_416" type="special_we" route="route_we" depart="1931" color="1,0,0"/>
+    <vehicle id="ns_417" type="car_ns" route="route_ns" depart="1950"/>
+    <vehicle id="ew_418" type="car_we" route="route_ew" depart="1955"/>
+    <vehicle id="ew_419" type="car_we" route="route_ew" depart="1960"/>
+    <vehicle id="we_420" type="car_we" route="route_we" depart="1963"/>
+    <vehicle id="we_421" type="car_we" route="route_we" depart="1964"/>
+    <vehicle id="ns_422" type="car_ns" route="route_ns" depart="1971"/>
+    <vehicle id="we_423" type="car_we" route="route_we" depart="1979"/>
+    <vehicle id="we_424" type="car_we" route="route_we" depart="1980"/>
+    <vehicle id="we_425" type="car_we" route="route_we" depart="1983"/>
+    <vehicle id="ew_426" type="car_we" route="route_ew" depart="1984"/>
+    <vehicle id="sn_427" type="car_ns" route="route_sn" depart="1985"/>
+    <vehicle id="ns_428" type="car_ns" route="route_ns" depart="1992"/>
+    <vehicle id="special_we_429" type="special_we" route="route_we" depart="1999" color="1,0,0"/>
+    <vehicle id="we_430" type="car_we" route="route_we" depart="2000"/>
+    <vehicle id="ew_431" type="car_we" route="route_ew" depart="2008"/>
+    <vehicle id="sn_432" type="car_ns" route="route_sn" depart="2015"/>
+    <vehicle id="we_433" type="car_we" route="route_we" depart="2017"/>
+    <vehicle id="special_we_434" type="special_we" route="route_we" depart="2028" color="1,0,0"/>
+    <vehicle id="we_435" type="car_we" route="route_we" depart="2036"/>
+    <vehicle id="special_we_436" type="special_we" route="route_we" depart="2037" color="1,0,0"/>
+    <vehicle id="special_we_437" type="special_we" route="route_we" depart="2041" color="1,0,0"/>
+    <vehicle id="sn_438" type="car_ns" route="route_sn" depart="2043"/>
+    <vehicle id="we_439" type="car_we" route="route_we" depart="2049"/>
+    <vehicle id="special_ew_440" type="special_we" route="route_ew" depart="2063" color="1,0,0"/>
+    <vehicle id="ns_441" type="car_ns" route="route_ns" depart="2065"/>
+    <vehicle id="we_442" type="car_we" route="route_we" depart="2068"/>
+    <vehicle id="special_we_443" type="special_we" route="route_we" depart="2075" color="1,0,0"/>
+    <vehicle id="special_we_444" type="special_we" route="route_we" depart="2078" color="1,0,0"/>
+    <vehicle id="special_we_445" type="special_we" route="route_we" depart="2082" color="1,0,0"/>
+    <vehicle id="ns_446" type="car_ns" route="route_ns" depart="2082"/>
+    <vehicle id="sn_447" type="car_ns" route="route_sn" depart="2097"/>
+    <vehicle id="ew_448" type="car_we" route="route_ew" depart="2107"/>
+    <vehicle id="ns_449" type="car_ns" route="route_ns" depart="2107"/>
+    <vehicle id="ew_450" type="car_we" route="route_ew" depart="2108"/>
+    <vehicle id="special_we_451" type="special_we" route="route_we" depart="2111" color="1,0,0"/>
+    <vehicle id="we_452" type="car_we" route="route_we" depart="2112"/>
+    <vehicle id="we_453" type="car_we" route="route_we" depart="2113"/>
+    <vehicle id="special_we_454" type="special_we" route="route_we" depart="2114" color="1,0,0"/>
+    <vehicle id="we_455" type="car_we" route="route_we" depart="2118"/>
+    <vehicle id="ns_456" type="car_ns" route="route_ns" depart="2118"/>
+    <vehicle id="we_457" type="car_we" route="route_we" depart="2127"/>
+    <vehicle id="we_458" type="car_we" route="route_we" depart="2129"/>
+    <vehicle id="ew_459" type="car_we" route="route_ew" depart="2130"/>
+    <vehicle id="sn_460" type="car_ns" route="route_sn" depart="2130"/>
+    <vehicle id="special_we_461" type="special_we" route="route_we" depart="2142" color="1,0,0"/>
+    <vehicle id="special_we_462" type="special_we" route="route_we" depart="2146" color="1,0,0"/>
+    <vehicle id="ns_463" type="car_ns" route="route_ns" depart="2153"/>
+    <vehicle id="we_464" type="car_we" route="route_we" depart="2161"/>
+    <vehicle id="special_we_465" type="special_we" route="route_we" depart="2164" color="1,0,0"/>
+    <vehicle id="sn_466" type="car_ns" route="route_sn" depart="2169"/>
+    <vehicle id="ns_467" type="car_ns" route="route_ns" depart="2174"/>
+    <vehicle id="ns_468" type="car_ns" route="route_ns" depart="2178"/>
+    <vehicle id="sn_469" type="car_ns" route="route_sn" depart="2178"/>
+    <vehicle id="we_470" type="car_we" route="route_we" depart="2188"/>
+    <vehicle id="ns_471" type="car_ns" route="route_ns" depart="2191"/>
+    <vehicle id="special_ew_472" type="special_we" route="route_ew" depart="2194" color="1,0,0"/>
+    <vehicle id="we_473" type="car_we" route="route_we" depart="2211"/>
+    <vehicle id="special_ew_474" type="special_we" route="route_ew" depart="2212" color="1,0,0"/>
+    <vehicle id="special_ns_475" type="special_ns" route="route_ns" depart="2214" color="0,0,1"/>
+    <vehicle id="ew_476" type="car_we" route="route_ew" depart="2215"/>
+    <vehicle id="special_ew_477" type="special_we" route="route_ew" depart="2228" color="1,0,0"/>
+    <vehicle id="ew_478" type="car_we" route="route_ew" depart="2233"/>
+    <vehicle id="we_479" type="car_we" route="route_we" depart="2243"/>
+    <vehicle id="special_ew_480" type="special_we" route="route_ew" depart="2243" color="1,0,0"/>
+    <vehicle id="special_we_481" type="special_we" route="route_we" depart="2248" color="1,0,0"/>
+    <vehicle id="we_482" type="car_we" route="route_we" depart="2252"/>
+    <vehicle id="we_483" type="car_we" route="route_we" depart="2258"/>
+    <vehicle id="we_484" type="car_we" route="route_we" depart="2260"/>
+    <vehicle id="we_485" type="car_we" route="route_we" depart="2268"/>
+    <vehicle id="we_486" type="car_we" route="route_we" depart="2269"/>
+    <vehicle id="we_487" type="car_we" route="route_we" depart="2270"/>
+    <vehicle id="we_488" type="car_we" route="route_we" depart="2274"/>
+    <vehicle id="special_ew_489" type="special_we" route="route_ew" depart="2274" color="1,0,0"/>
+    <vehicle id="we_490" type="car_we" route="route_we" depart="2278"/>
+    <vehicle id="sn_491" type="car_ns" route="route_sn" depart="2280"/>
+    <vehicle id="we_492" type="car_we" route="route_we" depart="2288"/>
+    <vehicle id="special_ns_493" type="special_ns" route="route_ns" depart="2302" color="0,0,1"/>
+    <vehicle id="ew_494" type="car_we" route="route_ew" depart="2303"/>
+    <vehicle id="we_495" type="car_we" route="route_we" depart="2304"/>
+    <vehicle id="we_496" type="car_we" route="route_we" depart="2307"/>
+    <vehicle id="we_497" type="car_we" route="route_we" depart="2312"/>
+    <vehicle id="sn_498" type="car_ns" route="route_sn" depart="2319"/>
+    <vehicle id="ns_499" type="car_ns" route="route_ns" depart="2326"/>
+    <vehicle id="ew_500" type="car_we" route="route_ew" depart="2327"/>
+    <vehicle id="special_we_501" type="special_we" route="route_we" depart="2329" color="1,0,0"/>
+    <vehicle id="ew_502" type="car_we" route="route_ew" depart="2336"/>
+    <vehicle id="sn_503" type="car_ns" route="route_sn" depart="2336"/>
+    <vehicle id="we_504" type="car_we" route="route_we" depart="2341"/>
+    <vehicle id="ew_505" type="car_we" route="route_ew" depart="2347"/>
+    <vehicle id="ew_506" type="car_we" route="route_ew" depart="2351"/>
+    <vehicle id="we_507" type="car_we" route="route_we" depart="2352"/>
+    <vehicle id="we_508" type="car_we" route="route_we" depart="2362"/>
+    <vehicle id="we_509" type="car_we" route="route_we" depart="2368"/>
+    <vehicle id="ew_510" type="car_we" route="route_ew" depart="2369"/>
+    <vehicle id="we_511" type="car_we" route="route_we" depart="2372"/>
+    <vehicle id="we_512" type="car_we" route="route_we" depart="2373"/>
+    <vehicle id="we_513" type="car_we" route="route_we" depart="2374"/>
+    <vehicle id="we_514" type="car_we" route="route_we" depart="2375"/>
+    <vehicle id="we_515" type="car_we" route="route_we" depart="2384"/>
+    <vehicle id="ew_516" type="car_we" route="route_ew" depart="2385"/>
+    <vehicle id="we_517" type="car_we" route="route_we" depart="2387"/>
+    <vehicle id="we_518" type="car_we" route="route_we" depart="2391"/>
+    <vehicle id="ew_519" type="car_we" route="route_ew" depart="2398"/>
+    <vehicle id="we_520" type="car_we" route="route_we" depart="2399"/>
+    <vehicle id="special_ew_521" type="special_we" route="route_ew" depart="2403" color="1,0,0"/>
+    <vehicle id="we_522" type="car_we" route="route_we" depart="2407"/>
+    <vehicle id="ew_523" type="car_we" route="route_ew" depart="2413"/>
+    <vehicle id="special_ew_524" type="special_we" route="route_ew" depart="2414" color="1,0,0"/>
+    <vehicle id="special_ew_525" type="special_we" route="route_ew" depart="2416" color="1,0,0"/>
+    <vehicle id="we_526" type="car_we" route="route_we" depart="2418"/>
+    <vehicle id="ew_527" type="car_we" route="route_ew" depart="2425"/>
+    <vehicle id="ew_528" type="car_we" route="route_ew" depart="2428"/>
+    <vehicle id="special_we_529" type="special_we" route="route_we" depart="2429" color="1,0,0"/>
+    <vehicle id="special_ns_530" type="special_ns" route="route_ns" depart="2442" color="0,0,1"/>
+    <vehicle id="we_531" type="car_we" route="route_we" depart="2444"/>
+    <vehicle id="ew_532" type="car_we" route="route_ew" depart="2448"/>
+    <vehicle id="we_533" type="car_we" route="route_we" depart="2454"/>
+    <vehicle id="sn_534" type="car_ns" route="route_sn" depart="2463"/>
+    <vehicle id="we_535" type="car_we" route="route_we" depart="2464"/>
+    <vehicle id="ew_536" type="car_we" route="route_ew" depart="2473"/>
+    <vehicle id="special_ns_537" type="special_ns" route="route_ns" depart="2473" color="0,0,1"/>
+    <vehicle id="special_we_538" type="special_we" route="route_we" depart="2477" color="1,0,0"/>
+    <vehicle id="special_we_539" type="special_we" route="route_we" depart="2482" color="1,0,0"/>
+    <vehicle id="ew_540" type="car_we" route="route_ew" depart="2493"/>
+    <vehicle id="special_we_541" type="special_we" route="route_we" depart="2503" color="1,0,0"/>
+    <vehicle id="we_542" type="car_we" route="route_we" depart="2504"/>
+    <vehicle id="we_543" type="car_we" route="route_we" depart="2510"/>
+    <vehicle id="ns_544" type="car_ns" route="route_ns" depart="2518"/>
+    <vehicle id="sn_545" type="car_ns" route="route_sn" depart="2531"/>
+    <vehicle id="ew_546" type="car_we" route="route_ew" depart="2532"/>
+    <vehicle id="we_547" type="car_we" route="route_we" depart="2545"/>
+    <vehicle id="sn_548" type="car_ns" route="route_sn" depart="2554"/>
+    <vehicle id="ew_549" type="car_we" route="route_ew" depart="2555"/>
+    <vehicle id="special_ew_550" type="special_we" route="route_ew" depart="2561" color="1,0,0"/>
+    <vehicle id="ew_551" type="car_we" route="route_ew" depart="2563"/>
+    <vehicle id="we_552" type="car_we" route="route_we" depart="2565"/>
+    <vehicle id="we_553" type="car_we" route="route_we" depart="2568"/>
+    <vehicle id="sn_554" type="car_ns" route="route_sn" depart="2570"/>
+    <vehicle id="we_555" type="car_we" route="route_we" depart="2575"/>
+    <vehicle id="we_556" type="car_we" route="route_we" depart="2577"/>
+    <vehicle id="we_557" type="car_we" route="route_we" depart="2585"/>
+    <vehicle id="we_558" type="car_we" route="route_we" depart="2588"/>
+    <vehicle id="sn_559" type="car_ns" route="route_sn" depart="2588"/>
+    <vehicle id="we_560" type="car_we" route="route_we" depart="2596"/>
+    <vehicle id="special_ew_561" type="special_we" route="route_ew" depart="2600" color="1,0,0"/>
+    <vehicle id="we_562" type="car_we" route="route_we" depart="2601"/>
+    <vehicle id="sn_563" type="car_ns" route="route_sn" depart="2616"/>
+    <vehicle id="ew_564" type="car_we" route="route_ew" depart="2628"/>
+    <vehicle id="ew_565" type="car_we" route="route_ew" depart="2629"/>
+    <vehicle id="we_566" type="car_we" route="route_we" depart="2630"/>
+    <vehicle id="we_567" type="car_we" route="route_we" depart="2633"/>
+    <vehicle id="ew_568" type="car_we" route="route_ew" depart="2645"/>
+    <vehicle id="ew_569" type="car_we" route="route_ew" depart="2647"/>
+    <vehicle id="we_570" type="car_we" route="route_we" depart="2654"/>
+    <vehicle id="we_571" type="car_we" route="route_we" depart="2656"/>
+    <vehicle id="special_ns_572" type="special_ns" route="route_ns" depart="2676" color="0,0,1"/>
+    <vehicle id="ew_573" type="car_we" route="route_ew" depart="2686"/>
+    <vehicle id="we_574" type="car_we" route="route_we" depart="2699"/>
+    <vehicle id="we_575" type="car_we" route="route_we" depart="2704"/>
+    <vehicle id="ew_576" type="car_we" route="route_ew" depart="2704"/>
+    <vehicle id="we_577" type="car_we" route="route_we" depart="2708"/>
+    <vehicle id="ew_578" type="car_we" route="route_ew" depart="2709"/>
+    <vehicle id="ew_579" type="car_we" route="route_ew" depart="2716"/>
+    <vehicle id="we_580" type="car_we" route="route_we" depart="2734"/>
+    <vehicle id="we_581" type="car_we" route="route_we" depart="2739"/>
+    <vehicle id="ew_582" type="car_we" route="route_ew" depart="2746"/>
+    <vehicle id="sn_583" type="car_ns" route="route_sn" depart="2752"/>
+    <vehicle id="we_584" type="car_we" route="route_we" depart="2753"/>
+    <vehicle id="ew_585" type="car_we" route="route_ew" depart="2759"/>
+    <vehicle id="ew_586" type="car_we" route="route_ew" depart="2761"/>
+    <vehicle id="ns_587" type="car_ns" route="route_ns" depart="2761"/>
+    <vehicle id="sn_588" type="car_ns" route="route_sn" depart="2777"/>
+    <vehicle id="we_589" type="car_we" route="route_we" depart="2784"/>
+    <vehicle id="we_590" type="car_we" route="route_we" depart="2790"/>
+    <vehicle id="sn_591" type="car_ns" route="route_sn" depart="2791"/>
+    <vehicle id="we_592" type="car_we" route="route_we" depart="2792"/>
+    <vehicle id="ew_593" type="car_we" route="route_ew" depart="2803"/>
+    <vehicle id="ns_594" type="car_ns" route="route_ns" depart="2817"/>
+    <vehicle id="ns_595" type="car_ns" route="route_ns" depart="2825"/>
+    <vehicle id="we_596" type="car_we" route="route_we" depart="2827"/>
+    <vehicle id="we_597" type="car_we" route="route_we" depart="2830"/>
+    <vehicle id="special_ns_598" type="special_ns" route="route_ns" depart="2832" color="0,0,1"/>
+    <vehicle id="we_599" type="car_we" route="route_we" depart="2835"/>
+    <vehicle id="we_600" type="car_we" route="route_we" depart="2854"/>
+    <vehicle id="we_601" type="car_we" route="route_we" depart="2857"/>
+    <vehicle id="we_602" type="car_we" route="route_we" depart="2868"/>
+    <vehicle id="ew_603" type="car_we" route="route_ew" depart="2872"/>
+    <vehicle id="sn_604" type="car_ns" route="route_sn" depart="2874"/>
+    <vehicle id="we_605" type="car_we" route="route_we" depart="2875"/>
+    <vehicle id="ew_606" type="car_we" route="route_ew" depart="2894"/>
+    <vehicle id="we_607" type="car_we" route="route_we" depart="2904"/>
+    <vehicle id="sn_608" type="car_ns" route="route_sn" depart="2905"/>
+    <vehicle id="we_609" type="car_we" route="route_we" depart="2906"/>
+    <vehicle id="we_610" type="car_we" route="route_we" depart="2911"/>
+    <vehicle id="ew_611" type="car_we" route="route_ew" depart="2926"/>
+    <vehicle id="ew_612" type="car_we" route="route_ew" depart="2928"/>
+    <vehicle id="we_613" type="car_we" route="route_we" depart="2929"/>
+    <vehicle id="we_614" type="car_we" route="route_we" depart="2931"/>
+    <vehicle id="sn_615" type="car_ns" route="route_sn" depart="2932"/>
+    <vehicle id="sn_616" type="car_ns" route="route_sn" depart="2933"/>
+    <vehicle id="ew_617" type="car_we" route="route_ew" depart="2951"/>
+    <vehicle id="special_ew_618" type="special_we" route="route_ew" depart="2955" color="1,0,0"/>
+    <vehicle id="we_619" type="car_we" route="route_we" depart="2958"/>
+    <vehicle id="ns_620" type="car_ns" route="route_ns" depart="2986"/>
+    <vehicle id="we_621" type="car_we" route="route_we" depart="2996"/>
+    <vehicle id="special_we_622" type="special_we" route="route_we" depart="2999" color="1,0,0"/>
+    <vehicle id="ns_623" type="car_ns" route="route_ns" depart="3002"/>
+    <vehicle id="we_624" type="car_we" route="route_we" depart="3005"/>
+    <vehicle id="we_625" type="car_we" route="route_we" depart="3006"/>
+    <vehicle id="ew_626" type="car_we" route="route_ew" depart="3008"/>
+    <vehicle id="we_627" type="car_we" route="route_we" depart="3009"/>
+    <vehicle id="special_ew_628" type="special_we" route="route_ew" depart="3016" color="1,0,0"/>
+    <vehicle id="special_we_629" type="special_we" route="route_we" depart="3020" color="1,0,0"/>
+    <vehicle id="ns_630" type="car_ns" route="route_ns" depart="3020"/>
+    <vehicle id="special_we_631" type="special_we" route="route_we" depart="3021" color="1,0,0"/>
+    <vehicle id="special_ew_632" type="special_we" route="route_ew" depart="3024" color="1,0,0"/>
+    <vehicle id="special_we_633" type="special_we" route="route_we" depart="3026" color="1,0,0"/>
+    <vehicle id="special_ew_634" type="special_we" route="route_ew" depart="3030" color="1,0,0"/>
+    <vehicle id="ew_635" type="car_we" route="route_ew" depart="3032"/>
+    <vehicle id="we_636" type="car_we" route="route_we" depart="3034"/>
+    <vehicle id="special_we_637" type="special_we" route="route_we" depart="3040" color="1,0,0"/>
+    <vehicle id="ew_638" type="car_we" route="route_ew" depart="3041"/>
+    <vehicle id="we_639" type="car_we" route="route_we" depart="3047"/>
+    <vehicle id="sn_640" type="car_ns" route="route_sn" depart="3048"/>
+    <vehicle id="we_641" type="car_we" route="route_we" depart="3052"/>
+    <vehicle id="we_642" type="car_we" route="route_we" depart="3058"/>
+    <vehicle id="we_643" type="car_we" route="route_we" depart="3059"/>
+    <vehicle id="we_644" type="car_we" route="route_we" depart="3068"/>
+    <vehicle id="ew_645" type="car_we" route="route_ew" depart="3076"/>
+    <vehicle id="ew_646" type="car_we" route="route_ew" depart="3077"/>
+    <vehicle id="special_we_647" type="special_we" route="route_we" depart="3078" color="1,0,0"/>
+    <vehicle id="we_648" type="car_we" route="route_we" depart="3084"/>
+    <vehicle id="ew_649" type="car_we" route="route_ew" depart="3088"/>
+    <vehicle id="we_650" type="car_we" route="route_we" depart="3089"/>
+    <vehicle id="we_651" type="car_we" route="route_we" depart="3094"/>
+    <vehicle id="ew_652" type="car_we" route="route_ew" depart="3095"/>
+    <vehicle id="we_653" type="car_we" route="route_we" depart="3098"/>
+    <vehicle id="special_sn_654" type="special_ns" route="route_sn" depart="3103" color="0,0,1"/>
+    <vehicle id="special_we_655" type="special_we" route="route_we" depart="3104" color="1,0,0"/>
+    <vehicle id="ns_656" type="car_ns" route="route_ns" depart="3104"/>
+    <vehicle id="we_657" type="car_we" route="route_we" depart="3113"/>
+    <vehicle id="we_658" type="car_we" route="route_we" depart="3114"/>
+    <vehicle id="sn_659" type="car_ns" route="route_sn" depart="3114"/>
+    <vehicle id="ew_660" type="car_we" route="route_ew" depart="3118"/>
+    <vehicle id="ew_661" type="car_we" route="route_ew" depart="3138"/>
+    <vehicle id="ew_662" type="car_we" route="route_ew" depart="3139"/>
+    <vehicle id="special_we_663" type="special_we" route="route_we" depart="3141" color="1,0,0"/>
+    <vehicle id="we_664" type="car_we" route="route_we" depart="3142"/>
+    <vehicle id="ew_665" type="car_we" route="route_ew" depart="3145"/>
+    <vehicle id="we_666" type="car_we" route="route_we" depart="3146"/>
+    <vehicle id="we_667" type="car_we" route="route_we" depart="3147"/>
+    <vehicle id="special_ew_668" type="special_we" route="route_ew" depart="3148" color="1,0,0"/>
+    <vehicle id="special_we_669" type="special_we" route="route_we" depart="3153" color="1,0,0"/>
+    <vehicle id="ew_670" type="car_we" route="route_ew" depart="3159"/>
+    <vehicle id="special_ew_671" type="special_we" route="route_ew" depart="3160" color="1,0,0"/>
+    <vehicle id="ew_672" type="car_we" route="route_ew" depart="3164"/>
+    <vehicle id="ew_673" type="car_we" route="route_ew" depart="3166"/>
+    <vehicle id="we_674" type="car_we" route="route_we" depart="3170"/>
+    <vehicle id="special_we_675" type="special_we" route="route_we" depart="3172" color="1,0,0"/>
+    <vehicle id="ew_676" type="car_we" route="route_ew" depart="3173"/>
+    <vehicle id="we_677" type="car_we" route="route_we" depart="3180"/>
+    <vehicle id="special_ew_678" type="special_we" route="route_ew" depart="3185" color="1,0,0"/>
+    <vehicle id="special_we_679" type="special_we" route="route_we" depart="3205" color="1,0,0"/>
+    <vehicle id="ew_680" type="car_we" route="route_ew" depart="3207"/>
+    <vehicle id="ew_681" type="car_we" route="route_ew" depart="3212"/>
+    <vehicle id="we_682" type="car_we" route="route_we" depart="3217"/>
+    <vehicle id="we_683" type="car_we" route="route_we" depart="3218"/>
+    <vehicle id="special_ew_684" type="special_we" route="route_ew" depart="3237" color="1,0,0"/>
+    <vehicle id="special_we_685" type="special_we" route="route_we" depart="3240" color="1,0,0"/>
+    <vehicle id="special_ew_686" type="special_we" route="route_ew" depart="3243" color="1,0,0"/>
+    <vehicle id="sn_687" type="car_ns" route="route_sn" depart="3245"/>
+    <vehicle id="special_we_688" type="special_we" route="route_we" depart="3247" color="1,0,0"/>
+    <vehicle id="special_ew_689" type="special_we" route="route_ew" depart="3247" color="1,0,0"/>
+    <vehicle id="ew_690" type="car_we" route="route_ew" depart="3250"/>
+    <vehicle id="ns_691" type="car_ns" route="route_ns" depart="3250"/>
+    <vehicle id="sn_692" type="car_ns" route="route_sn" depart="3257"/>
+    <vehicle id="we_693" type="car_we" route="route_we" depart="3260"/>
+    <vehicle id="we_694" type="car_we" route="route_we" depart="3262"/>
+    <vehicle id="we_695" type="car_we" route="route_we" depart="3263"/>
+    <vehicle id="we_696" type="car_we" route="route_we" depart="3270"/>
+    <vehicle id="ew_697" type="car_we" route="route_ew" depart="3271"/>
+    <vehicle id="we_698" type="car_we" route="route_we" depart="3272"/>
+    <vehicle id="we_699" type="car_we" route="route_we" depart="3275"/>
+    <vehicle id="special_ns_700" type="special_ns" route="route_ns" depart="3277" color="0,0,1"/>
+    <vehicle id="special_we_701" type="special_we" route="route_we" depart="3291" color="1,0,0"/>
+    <vehicle id="ew_702" type="car_we" route="route_ew" depart="3298"/>
+    <vehicle id="special_we_703" type="special_we" route="route_we" depart="3300" color="1,0,0"/>
+    <vehicle id="we_704" type="car_we" route="route_we" depart="3302"/>
+    <vehicle id="ew_705" type="car_we" route="route_ew" depart="3306"/>
+    <vehicle id="we_706" type="car_we" route="route_we" depart="3308"/>
+    <vehicle id="special_ew_707" type="special_we" route="route_ew" depart="3317" color="1,0,0"/>
+    <vehicle id="we_708" type="car_we" route="route_we" depart="3318"/>
+    <vehicle id="we_709" type="car_we" route="route_we" depart="3322"/>
+    <vehicle id="ns_710" type="car_ns" route="route_ns" depart="3326"/>
+    <vehicle id="ew_711" type="car_we" route="route_ew" depart="3337"/>
+    <vehicle id="ew_712" type="car_we" route="route_ew" depart="3341"/>
+    <vehicle id="special_we_713" type="special_we" route="route_we" depart="3345" color="1,0,0"/>
+    <vehicle id="ns_714" type="car_ns" route="route_ns" depart="3349"/>
+    <vehicle id="we_715" type="car_we" route="route_we" depart="3353"/>
+    <vehicle id="we_716" type="car_we" route="route_we" depart="3363"/>
+    <vehicle id="ew_717" type="car_we" route="route_ew" depart="3363"/>
+    <vehicle id="we_718" type="car_we" route="route_we" depart="3368"/>
+    <vehicle id="ew_719" type="car_we" route="route_ew" depart="3372"/>
+    <vehicle id="we_720" type="car_we" route="route_we" depart="3375"/>
+    <vehicle id="ew_721" type="car_we" route="route_ew" depart="3380"/>
+    <vehicle id="special_ew_722" type="special_we" route="route_ew" depart="3381" color="1,0,0"/>
+    <vehicle id="sn_723" type="car_ns" route="route_sn" depart="3387"/>
+    <vehicle id="ew_724" type="car_we" route="route_ew" depart="3389"/>
+    <vehicle id="special_ns_725" type="special_ns" route="route_ns" depart="3398" color="0,0,1"/>
+    <vehicle id="we_726" type="car_we" route="route_we" depart="3413"/>
+    <vehicle id="we_727" type="car_we" route="route_we" depart="3414"/>
+    <vehicle id="ew_728" type="car_we" route="route_ew" depart="3417"/>
+    <vehicle id="special_ns_729" type="special_ns" route="route_ns" depart="3418" color="0,0,1"/>
+    <vehicle id="ew_730" type="car_we" route="route_ew" depart="3426"/>
+    <vehicle id="ns_731" type="car_ns" route="route_ns" depart="3435"/>
+    <vehicle id="ew_732" type="car_we" route="route_ew" depart="3445"/>
+    <vehicle id="we_733" type="car_we" route="route_we" depart="3453"/>
+    <vehicle id="special_we_734" type="special_we" route="route_we" depart="3456" color="1,0,0"/>
+    <vehicle id="we_735" type="car_we" route="route_we" depart="3457"/>
+    <vehicle id="we_736" type="car_we" route="route_we" depart="3458"/>
+    <vehicle id="ew_737" type="car_we" route="route_ew" depart="3459"/>
+    <vehicle id="special_ew_738" type="special_we" route="route_ew" depart="3463" color="1,0,0"/>
+    <vehicle id="we_739" type="car_we" route="route_we" depart="3464"/>
+    <vehicle id="ew_740" type="car_we" route="route_ew" depart="3464"/>
+    <vehicle id="we_741" type="car_we" route="route_we" depart="3466"/>
+    <vehicle id="we_742" type="car_we" route="route_we" depart="3473"/>
+    <vehicle id="ew_743" type="car_we" route="route_ew" depart="3473"/>
+    <vehicle id="ns_744" type="car_ns" route="route_ns" depart="3473"/>
+    <vehicle id="ew_745" type="car_we" route="route_ew" depart="3478"/>
+    <vehicle id="ns_746" type="car_ns" route="route_ns" depart="3480"/>
+    <vehicle id="special_ew_747" type="special_we" route="route_ew" depart="3482" color="1,0,0"/>
+    <vehicle id="sn_748" type="car_ns" route="route_sn" depart="3483"/>
+    <vehicle id="ew_749" type="car_we" route="route_ew" depart="3487"/>
+    <vehicle id="ew_750" type="car_we" route="route_ew" depart="3494"/>
+    <vehicle id="special_ew_751" type="special_we" route="route_ew" depart="3496" color="1,0,0"/>
+    <vehicle id="ew_752" type="car_we" route="route_ew" depart="3501"/>
+    <vehicle id="we_753" type="car_we" route="route_we" depart="3502"/>
+    <vehicle id="special_ew_754" type="special_we" route="route_ew" depart="3513" color="1,0,0"/>
+    <vehicle id="special_we_755" type="special_we" route="route_we" depart="3514" color="1,0,0"/>
+    <vehicle id="we_756" type="car_we" route="route_we" depart="3518"/>
+    <vehicle id="ew_757" type="car_we" route="route_ew" depart="3519"/>
+    <vehicle id="we_758" type="car_we" route="route_we" depart="3524"/>
+    <vehicle id="special_we_759" type="special_we" route="route_we" depart="3530" color="1,0,0"/>
+    <vehicle id="special_ew_760" type="special_we" route="route_ew" depart="3532" color="1,0,0"/>
+    <vehicle id="we_761" type="car_we" route="route_we" depart="3543"/>
+    <vehicle id="we_762" type="car_we" route="route_we" depart="3544"/>
+    <vehicle id="ew_763" type="car_we" route="route_ew" depart="3556"/>
+    <vehicle id="we_764" type="car_we" route="route_we" depart="3562"/>
+    <vehicle id="ns_765" type="car_ns" route="route_ns" depart="3562"/>
+    <vehicle id="ew_766" type="car_we" route="route_ew" depart="3564"/>
+    <vehicle id="we_767" type="car_we" route="route_we" depart="3566"/>
+    <vehicle id="we_768" type="car_we" route="route_we" depart="3568"/>
+    <vehicle id="ew_769" type="car_we" route="route_ew" depart="3573"/>
+    <vehicle id="we_770" type="car_we" route="route_we" depart="3577"/>
+    <vehicle id="we_771" type="car_we" route="route_we" depart="3578"/>
+    <vehicle id="ew_772" type="car_we" route="route_ew" depart="3578"/>
+    <vehicle id="ns_773" type="car_ns" route="route_ns" depart="3581"/>
+    <vehicle id="we_774" type="car_we" route="route_we" depart="3587"/>
+    <vehicle id="ew_775" type="car_we" route="route_ew" depart="3587"/>
+</routes>
