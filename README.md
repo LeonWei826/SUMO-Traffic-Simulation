@@ -62,19 +62,25 @@ Python 3.7+
 
 Installation & Execution
 1.Clone the repository:
-  '''bash
+  ```bash
   git clone https://github.com/LeonWei826/SUMO-Traffic-Simulation.git
   cd SUMO-Traffic-Simulation
-  '''
+  ```
 
 Install the required Python packages:
-pip install traci sumolib matplotlib
+  ```bash
+  pip install traci sumolib matplotlib
+  ```
 
 Run the traffic simulation (from the root directory):
-python runner.py
+  ```
+  python runner.py
+  ```
 
 Analyze the results and generate the benchmark chart:
-python analyse.py
+  ```
+  python analyse.py
+  ```
 
 📁 Repository Structure
 runner.py: The core control logic (Adaptive timing & Emergency preemption state machine).
