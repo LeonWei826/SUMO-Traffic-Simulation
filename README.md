@@ -36,7 +36,7 @@ While the current system successfully demonstrates the core concepts of adaptive
 
 1. **Preemption Efficiency is Not Absolute (Main Limitation)**:
    - **Observation**: Although emergency vehicles (2.13s) wait less than normal vehicles (2.85s), the reduction is only marginal, not near-zero as ideally expected.
-   - **Root Cause**: The emergency vehicle might still be blocked by the physical distance from the trigger point (induction loop) to the intersection, or stuck behind a queue of normal vehicles that cannot clear the intersection instantly.
+   - **Root Cause**: The emergency vehicle might still be blocked by the physical distance from the trigger point to the intersection, or stuck behind a queue of normal vehicles that cannot clear instantly.
    - **Future Work**: Implement **Lane-clearing protocols** (forcing normal vehicles to yield) or dynamic green wave adjustments to achieve true "zero-wait" for emergency vehicles.
 
 2. **Single Intersection Focus**: 
@@ -47,8 +47,6 @@ While the current system successfully demonstrates the core concepts of adaptive
 
 4. **Hard-coded Thresholds**: 
    The yellow light durations (3s/5s) and maximum green durations (30s/40s) are hard-coded based on empirical tuning. A more robust approach would involve **Reinforcement Learning (RL)** to dynamically optimize these parameters.
-
-![Benchmark Result](benchmark_result.png)
 
 ## 🚀 Getting Started
 
