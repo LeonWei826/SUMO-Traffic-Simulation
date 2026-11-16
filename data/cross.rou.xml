@@ -1,18 +1,18 @@
 <routes>
-        <!-- 东西向普通小汽车 -->
+        <!-- East-West Normal Cars -->
         <vType id="car_we" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" guiShape="passenger"/>
-        <!-- 南北向普通小汽车 -->
+        <!-- North-South Normal Cars -->
         <vType id="car_ns" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="16.67" guiShape="passenger"/>
-        <!-- 东西向特殊车辆（救护车） -->
+        <!-- East-West Emergency Vehicles (Ambulance) -->
         <vType id="special_we" accel="0.8" decel="4.5" sigma="0.5" length="6" minGap="2.5" maxSpeed="20" vClass="emergency" color="1,0,0"/>
-        <!-- 南北向特殊车辆（消防车） -->
+        <!-- North-South Emergency Vehicles (Fire Truck) -->
         <vType id="special_ns" accel="0.8" decel="4.5" sigma="0.5" length="7" minGap="3" maxSpeed="20" vClass="emergency" color="0,0,1"/>
 
-        <!-- 定义 4 条路线 -->
-        <route id="route_we" edges="51o 1i 2o 52i" /> <!-- 西 -> 东 -->
-        <route id="route_ew" edges="52o 2i 1o 51i" /> <!-- 东 -> 西 -->
-        <route id="route_ns" edges="54o 4i 3o 53i" /> <!-- 北 -> 南 -->
-        <route id="route_sn" edges="53o 3i 4o 54i" /> <!-- 南 -> 北 -->
+        <!-- Define 4 routes -->
+        <route id="route_we" edges="51o 1i 2o 52i" /> <!-- West -> East -->
+        <route id="route_ew" edges="52o 2i 1o 51i" /> <!-- East -> West -->
+        <route id="route_ns" edges="54o 4i 3o 53i" /> <!-- North -> South -->
+        <route id="route_sn" edges="53o 3i 4o 54i" /> <!-- South -> North -->
         
     <vehicle id="ew_0" type="car_we" route="route_ew" depart="0"/>
     <vehicle id="we_1" type="car_we" route="route_we" depart="2"/>
