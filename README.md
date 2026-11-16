@@ -26,7 +26,27 @@ Beyond standard dynamic timing based on lane queue lengths, this project specifi
 Based on a 3600-second (1 hour) microsimulation with over 700 vehicles and an emergency vehicle ratio of 20%:
 
 - **Normal Vehicle Average Waiting Time**: Optimized down to **2.85 seconds**.
-- **Emergency Vehicle Waiting Time**: Drastically reduced to near-zero, proving the effectiveness of the preemption algorithm.
+- **Emergency Vehicle Average Waiting Time**: Reduced to **2.13 seconds**, showing a clear priority advantage compared to normal vehicles.
+
+![Benchmark Result](benchmark_result.png)
+
+## ⚠️ Limitations & Future Work
+
+While the current system successfully demonstrates the core concepts of adaptive traffic control and emergency vehicle preemption, there are several areas for improvement:
+
+1. **Preemption Efficiency is Not Absolute (Main Limitation)**:
+   - **Observation**: Although emergency vehicles (2.13s) wait less than normal vehicles (2.85s), the reduction is only marginal, not near-zero as ideally expected.
+   - **Root Cause**: The emergency vehicle might still be blocked by the physical distance from the trigger point (induction loop) to the intersection, or stuck behind a queue of normal vehicles that cannot clear the intersection instantly.
+   - **Future Work**: Implement **Lane-clearing protocols** (forcing normal vehicles to yield) or dynamic green wave adjustments to achieve true "zero-wait" for emergency vehicles.
+
+2. **Single Intersection Focus**: 
+   Currently, the system controls only a single isolated intersection. Future work requires **Green Wave Coordination** across multiple intersections.
+   
+3. **Simplified Environment**: 
+   Pedestrians and cyclists are currently not considered in the simulation.
+
+4. **Hard-coded Thresholds**: 
+   The yellow light durations (3s/5s) and maximum green durations (30s/40s) are hard-coded based on empirical tuning. A more robust approach would involve **Reinforcement Learning (RL)** to dynamically optimize these parameters.
 
 ![Benchmark Result](benchmark_result.png)
 
