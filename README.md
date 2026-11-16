@@ -5,7 +5,7 @@ This project implements an **adaptive traffic signal control algorithm** based o
 
 Beyond standard dynamic timing based on lane queue lengths, this project specifically introduces an **Emergency Vehicle Preemption (EVP)** strategy. It ensures absolute priority for emergency vehicles (e.g., ambulances, fire trucks) while maintaining the overall efficiency of the intersection and avoiding severe traffic congestion or sudden braking.
 
-✨ Key Features
+##✨ Key Features
 Dynamic Signal Timing (Adaptive Control)
 
 Uses traci.lane.getLastStepHaltingNumber() to monitor real-time vehicle queue lengths rather than relying solely on instantaneous induction loop triggers.
@@ -26,7 +26,7 @@ Parses the output tripinfo.xml to calculate weighted average waiting times, dist
 
 Automatically generates a benchmark bar chart using matplotlib.
 
-📊 Benchmark Results
+##📊 Benchmark Results
 Based on a 3600-second (1 hour) microsimulation with over 700 vehicles and an emergency vehicle ratio of 20%:
 
 Normal Vehicle Average Waiting Time: Optimized down to 2.85 seconds.
@@ -35,7 +35,7 @@ Emergency Vehicle Average Waiting Time: Reduced to 2.13 seconds, showing a clear
 
 https://benchmark_result.png/
 
-⚠️ Limitations & Future Work
+##⚠️ Limitations & Future Work
 While the current system successfully demonstrates the core concepts of adaptive traffic control and emergency vehicle preemption, there are several areas for improvement:
 
 Preemption Efficiency is Not Absolute (Main Limitation):
@@ -55,7 +55,7 @@ Pedestrians and cyclists are currently not considered in the simulation.
 Hard-coded Thresholds:
 The yellow light durations (3s/5s) and maximum green durations (30s/40s) are hard-coded based on empirical tuning. A more robust approach would involve Reinforcement Learning (RL) to dynamically optimize these parameters.
 
-🚀 Getting Started
+##🚀 Getting Started
 Prerequisites
 SUMO installed and SUMO_HOME environment variable configured.
 
@@ -83,7 +83,7 @@ Analyze the results and generate the benchmark chart:
   python analyse.py
   ```
 
-📁 Repository Structure
+##📁 Repository Structure
 runner.py: The core control logic (Adaptive timing & Emergency preemption state machine).
 
 analyse.py: Data parser and visualization script.
@@ -94,5 +94,5 @@ benchmark_result.png: The performance comparison chart.
 
 .gitignore: Git ignore rules.
 
-📄 License & Acknowledgement
+##📄 License & Acknowledgement
 The baseline simulation skeleton and network are based on the official SUMO traci_tls tutorial (EPL-2.0). The enhanced control logic, emergency vehicle preemption algorithm, and data analysis scripts are developed as a personal engineering project.
