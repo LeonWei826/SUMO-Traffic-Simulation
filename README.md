@@ -33,7 +33,7 @@ Normal Vehicle Average Waiting Time: Optimized down to 2.85 seconds.
 
 Emergency Vehicle Average Waiting Time: Reduced to 2.13 seconds, showing a clear priority advantage compared to normal vehicles.
 
-https://benchmark_result.png/
+![Benchmark Result](benchmark_result.png)
 
 ## ⚠️ Limitations & Future Work
 While the current system successfully demonstrates the core concepts of adaptive traffic control and emergency vehicle preemption, there are several areas for improvement:
