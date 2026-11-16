@@ -61,9 +61,11 @@ SUMO installed and SUMO_HOME environment variable configured.
 Python 3.7+
 
 Installation & Execution
-Clone the repository:
-git clone https://github.com/LeonWei826/SUMO-Traffic-Simulation.git
-cd SUMO-Traffic-Simulation
+1.Clone the repository:
+  '''bash
+  git clone https://github.com/LeonWei826/SUMO-Traffic-Simulation.git
+  cd SUMO-Traffic-Simulation
+  '''
 
 Install the required Python packages:
 pip install traci sumolib matplotlib
